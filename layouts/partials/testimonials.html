@@ -1,0 +1,28 @@
+<div class="w-100"></div>
+<div class="col-md-12">
+    <h1 class="text-center">Testimonials</h1>
+</div>
+<div class="w-100"></div>
+
+<div class="testimonials-wrap">
+    <div class="testimonials" data-chunksize="1">
+        {{ range .Site.Params.testimonials.items }}
+        <div class="testimonials__item">
+            <blockquote>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center">
+                        <p>
+                            {{ .opinion }}
+                        </p>
+                        <small>
+                            <cite>{{ .name }}</cite> {{ .title }}
+                        </small>
+                    </div>
+
+                    <div class="w-100 mb-5"></div>
+                </div>
+            </blockquote>
+        </div>
+        {{ end }}
+    </div>
+</div>

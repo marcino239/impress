@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+<div class="container">
+    <div class="row">
+        <div class="
+            col-lg-10 col-lg-offset-1
+            col-md-10 col-md-offset-1
+            col-sm-12
+            col-xs-12
+            mt-5
+            mb-5
+        ">
+
+            {{ range .Pages }}
+            <h1><a href="{{.Permalink}}">{{.Title}}</a></h1>
+            <p>Posted: {{.Date.Format "2006-01-02"}}</p>
+
+            <!-- <h1>{{ .Title }}</h2> -->
+
+            {{ .Content }}
+
+            <div class="w-100 mb-5"></div>
+
+            {{ end }}
+
+
+        </div>
+    </div>
+</div>
+
+
+
+{{ end }}

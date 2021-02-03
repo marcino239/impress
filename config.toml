@@ -1,0 +1,25 @@
+# Page settings
+
+baseURL = "http://localhost"
+languageCode = "en"
+title = "Impress.js presentation"
+
+#[params]
+#    author = "Author"
+#    description = "Bla bla"
+#    images = [ "/assets/images/og-image3.jpg" ]
+#
+#    [params.brand]
+#        img = "/assets/images/cortex-logo.svg"
+#        url = "/"
+#        name = "CORTEX"
+#
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    style = "pygments"
+
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

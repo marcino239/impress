@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<div class="container">
+    <div class="row">
+        <div class="
+            col-lg-10 col-lg-offset-1
+            col-md-10 col-md-offset-1
+            col-sm-12
+            col-xs-12
+            mt-5
+            mb-5
+        ">
+            <h1>{{.Title}}</h1>
+            <p>Posted: {{.Date.Format "2006-01-02"}}</p>
+            {{- .Content | markdownify -}}
+        </div>
+    </div>
+</div>
+
+{{ end }}

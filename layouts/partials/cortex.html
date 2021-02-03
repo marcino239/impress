@@ -1,0 +1,61 @@
+{{ with .Site.Params.cortex }}
+<div class="w-100"></div>
+<div class="col-md-12">
+    <h2>{{ .label1 }}</h2>
+    <hr>
+    <p>
+        {{ .description1 | markdownify }}
+    </p>
+</div>
+
+<div class="w-100"></div>
+<div class="col-md-12">
+    <h2>{{ .label3 }}</h2>
+    <hr>
+    <p>
+        {{ .description3 | markdownify }}
+    </p>
+</div>
+
+<div class="w-100"></div>
+<div class="col-md-12 mb-5">
+    <a class="btn btn-primary btn-lg" href="/cortex">Find out more details</a>
+</div>
+<div class="w-100 mb-5"></div>
+
+<div class="col-md-12 mb-5">
+    <h2>{{ .label2 }}</h2>
+    <hr>
+</div>
+{{ end }}
+
+{{ range .Site.Params.cortex.sections }}
+{{ if .title }}
+<div class="row">
+    <div class="col-md-12 mb-5">
+        <h2>{{ .title }}</h2>
+        <hr>
+    </div>
+</div>
+{{ end }}
+{{ range .rows }}
+<div class="row">
+    {{ range .items }}
+    <div class="col-md-4 mb-5">
+        <div class="card h-100">
+            <img class="card-img-top mx-auto mt-1"
+                src="{{ if .image }}{{ .image }}{{ else }}https://placehold.it/300x200{{ end }}"
+                alt=""
+                style="width: 100px"
+            >
+            <div class="card-body">
+                <h4 class="card-title">{{ .title }}</h4>
+                <p class="card-text">{{ .description }}</p>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ end }}
+{{ end }}
+<div class="w-100"></div>

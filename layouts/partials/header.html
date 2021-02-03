@@ -1,0 +1,14 @@
+<!-- Header -->
+{{ with .Site.Params.header }}
+<header class="py-5 mb-5"
+  style="background-image: url('{{ .img }}'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-lg-12">
+        <h1 class="display-4 text-black mt-5 mb-2 font-weight-bold">{{ .name }}</h1>
+        <p class="lead mb-5 text-black font-weight-bold">{{ .tagline }}</p>
+      </div>
+    </div>
+  </div>
+</header>
+{{ end }}

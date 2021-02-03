@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+
+  {{ partial "head.html" . }}
+
+</head>
+
+<body>
+
+  {{ partial "header.html" . }}
+
+  <div id="impress">
+
+    <!-- <div class="step slide" data-x="0" data-y="-1500">
+      <q>Don’t you think that presentations given <strong>in modern browsers</strong> shouldn’t <strong>copy the limits</strong> of ‘classic’ slide decks?</q>
+  </div>
+
+  <div class="step slide" data-x="1000" data-y="-1500">
+      <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+  </div> -->
+
+
+    <div class="step slide" data-rel-x="1000" data-rel-y="1000" data-scale="1">
+        <p>My first slide</p>
+        <img src="https://unsplash.com/photos/kL4octR2Zyk/download?force=true&w=640" style="width: 50%"/>
+    </div>
+
+    <div class="step slide" data-x="2000" data-y="2000">
+      <p>My second slide</p>
+      <img src="https://unsplash.com/photos/xqqjZznrar0/download?force=true&w=640" style="width: 50%"/>
+    </div>
+
+    
+  </div>
+
+
+  {{ partial "scripts.html" . }}
+  <script>impress().init();</script>
+
+</body>
+
+</html>
